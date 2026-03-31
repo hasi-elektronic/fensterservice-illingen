@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fenster Service Illingen – Fenster, Türen & Rollläden vom Profi</title>
+  <meta name="description" content="Fenster Service Illingen – Ihr Profi für Fenster, Türen und Rollläden. Zuverlässig, fair und qualitätsbewusst in Illingen und Umgebung." />
+  <meta property="og:title" content="Fenster Service Illingen" />
+  <meta property="og:description" content="Professionelle Fenster-, Tür- und Rollladenmontage in Illingen und Umgebung." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fenster Service Illingen",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Luigstr. 26",
+      "postalCode": "75428",
+      "addressLocality": "Illingen",
+      "addressCountry": "DE"
+    },
+    "telephone": "+491703553077",
+    "email": "info@fensterserviceillingen.de",
+    "url": "https://fensterservice-illingen.pages.dev"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f1f38;
+      --navy-mid: #1a3255;
+      --steel: #2d5a8e;
+      --sky: #4a9eca;
+      --gold: #c9a84c;
+      --gold-light: #e8c96d;
+      --white: #ffffff;
+      --off-white: #f7f8fa;
+      --gray-light: #e8edf4;
+      --gray: #8a9ab5;
+      --text: #1a2540;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+      background: rgba(15,31,56,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .burger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(15,31,56,0.92) 0%, rgba(26,50,85,0.82) 60%, rgba(45,90,142,0.6) 100%),
+        url('https://images.unsplash.com/photo-1604608672516-5b5e0e8a4c69?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center;
+      padding: 0 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.03) 60px,
+        rgba(201,168,76,0.03) 61px
+      );
+    }
+
+    .hero-content {
+      max-width: 680px;
+      position: relative; z-index: 2;
+      animation: heroIn 0.9s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold);
+      position: relative;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      padding: 0.85rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .stat-item { color: white; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem; font-weight: 300; }
+
+    /* ── SCROLL ANIMATION ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 6rem 5%; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 560px;
+      font-weight: 300;
+    }
+
+    /* ── LEISTUNGEN ── */
+    #leistungen { background: var(--off-white); }
+
+    .leistungen-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
+    .leistungen-header .section-sub { margin: 0 auto; }
+
+    .leistungen-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .leistung-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      border: 1px solid var(--gray-light);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .leistung-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--steel), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s;
+    }
+
+    .leistung-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(15,31,56,0.1);
+      border-color: transparent;
+    }
+    .leistung-card:hover::before { transform: scaleX(1); }
+
+    .leistung-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--navy), var(--steel));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .leistung-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .leistung-card p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .leistung-features {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+    .leistung-features li {
+      font-size: 0.88rem;
+      color: var(--text);
+      padding: 0.35rem 0;
+      display: flex; align-items: center; gap: 0.6rem;
+      border-top: 1px solid var(--gray-light);
+    }
+    .leistung-features li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* ── ÜBER UNS ── */
+    #ueber-uns {
+      background: var(--white);
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      #ueber-uns { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 5%; }
+    }
+
+    .ueber-visual {
+      position: relative;
+    }
+
+    .ueber-img-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--steel) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ueber-img-frame svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .ueber-badge-float {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 12px 40px rgba(15,31,56,0.15);
+      display: flex; align-items: center; gap: 1rem;
+      border: 1px solid var(--gray-light);
+    }
+
+    .badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .badge-txt { font-size: 0.8rem; color: var(--gray); font-weight: 400; line-height: 1.4; }
+
+    .ueber-text .section-sub { margin-bottom: 2rem; }
+
+    .vorteile-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .vorteil-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--off-white);
+      border-radius: 8px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .vorteil-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .vorteil-title { font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.2rem; }
+    .vorteil-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.5; }
+
+    /* ── WARUM WIR ── */
+    #warum {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      text-align: center;
+    }
+
+    #warum .section-label { color: var(--gold); }
+    #warum .section-title { color: var(--white); }
+    #warum .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 4rem; }
+
+    .warum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .warum-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s;
+    }
+    .warum-item:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+
+    .warum-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .warum-label {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 400;
+    }
+
+    /* ── KONTAKT ── */
+    #kontakt { background: var(--off-white); }
+
+    .kontakt-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .kontakt-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    .kontakt-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .kontakt-info p {
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .kontakt-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .kontakt-card {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--white);
+      padding: 1.1rem 1.4rem;
+      border-radius: 10px;
+      border: 1px solid var(--gray-light);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.25s;
+    }
+    .kontakt-card:hover {
+      border-color: var(--steel);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(15,31,56,0.08);
+    }
+    .kontakt-card-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .icon-tel  { background: #e8f4fd; }
+    .icon-mail { background: #fdf3e8; }
+    .icon-wa   { background: #e8fdf0; }
+    .icon-addr { background: #f0e8fd; }
+
+    .kontakt-card-text strong {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+    .kontakt-card-text span {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    /* FORM */
+    .contact-form {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.5rem;
+      border: 1px solid var(--gray-light);
+      box-shadow: 0 8px 32px rgba(15,31,56,0.06);
+    }
+
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.8rem 1rem;
+      border: 1.5px solid var(--gray-light);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--off-white);
+      transition: all 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--steel);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(45,90,142,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+
+    .form-dsgvo {
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      display: flex; align-items: flex-start; gap: 0.6rem;
+    }
+    .form-dsgvo input[type=checkbox] { margin-top: 3px; flex-shrink: 0; }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--navy), var(--steel));
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      letter-spacing: 0.03em;
+    }
+    .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,31,56,0.2); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-msg {
+      display: none;
+      padding: 0.9rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .form-msg.success { background: #e8fdf0; color: #1a7a3a; border: 1px solid #b8e8c8; display: block; }
+    .form-msg.error   { background: #fde8e8; color: #7a1a1a; border: 1px solid #e8b8b8; display: block; }
+
+    /* WhatsApp FAB */
+    .wa-fab {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 60px; height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      text-decoration: none;
+      z-index: 200;
+      transition: all 0.3s;
+      animation: waPop 0.5s 1.5s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    .wa-fab:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
+
+    @keyframes waPop {
+      from { opacity: 0; transform: scale(0); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .wa-fab svg { width: 32px; height: 32px; fill: white; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      padding: 2rem 5%;
+      text-align: center;
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; gap: 1.5rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--navy); padding: 1.5rem 5%; gap: 1.2rem; }
+      .nav-links.open { display: flex; }
+      .burger { display: flex; }
+      .hero-stats { gap: 1.5rem; }
+      section { padding: 4rem 5%; }
+      .ueber-badge-float { right: 0; bottom: -1rem; }
+      .wa-fab { bottom: 1.2rem; right: 1.2rem; width: 52px; height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Fenster Service <span>Illingen</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#ueber-uns">Über uns</a></li>
+    <li><a href="#kontakt" class="nav-cta">Angebot anfragen</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Ihr Profi in Illingen &amp; Umgebung</div>
+    <h1 class="hero-title">
+      Fenster, Türen &<br /><em>Rollläden</em><br />vom Profi.
+    </h1>
+    <p class="hero-sub">
+      Zuverlässige Montage, faire Preise und höchste Qualität – für Privatkunden und Gewerbetreibende in Illingen und der gesamten Region.
+    </p>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn-primary">
+        ✉ Jetzt Angebot anfragen
+      </a>
+      <a href="tel:+491703553077" class="btn-ghost">
+        📞 +49 170 3553077
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Jahre Erfahrung</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2.000+</div>
+        <div class="stat-label">Zufriedene Kunden</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1.500+</div>
+        <div class="stat-label">Installierte Fenster</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section id="leistungen">
+  <div class="leistungen-header reveal">
+    <div class="section-label">Was wir anbieten</div>
+    <h2 class="section-title">Unsere Leistungen</h2>
+    <p class="section-sub">Von der Beratung bis zur Montage – alles aus einer Hand, termingerecht und mit Qualitätsgarantie.</p>
+  </div>
+  <div class="leistungen-grid">
+    <div class="leistung-card reveal">
+      <div class="leistung-icon">🪟</div>
+      <h3>Fensterinstallation</h3>
+      <p>Professionelle Montage neuer Fenster für optimale Wärmedämmung, Schallschutz und langlebige Funktion.</p>
+      <ul class="leistung-features">
+        <li>Kunststoff- & Holzfenster</li>
+        <li>Aluminiumfenster</li>
+        <li>Energieeffiziente Verglasung</li>
+        <li>Fachgerechter Einbau</li>
+      </ul>
+    </div>
+    <div class="leistung-card reveal">
+      <div class="leistung-icon">🚪</div>
+      <h3>Türen & Haustüren</h3>
+      <p>Sicherheit trifft Design – moderne Türen für Wohnhäuser, Gewerbe und Mehrfamilienhäuser.</p>
+      <ul class="leistung-features">
+        <li>Haustüren & Wohnungstüren</li>
+        <li>Sicherheitstüren (RC2/RC3)</li>
+        <li>Balkon- & Terrassentüren</li>
+        <li>Automatische Türsysteme</li>
+      </ul>
+    </div>
+    <div class="leistung-card reveal">
+      <div class="leistung-icon">🏠</div>
+      <h3>Rollläden & Sonnenschutz</h3>
+      <p>Hochwertige Rollläden für besseren Sonnenschutz, Privatsphäre und erhöhte Einbruchsicherheit.</p>
+      <ul class="leistung-features">
+        <li>Aufsatz- & Vorbaurollläden</li>
+        <li>Elektrischer Antrieb</li>
+        <li>Raffstores & Jalousien</li>
+        <li>Smart-Home Integration</li>
+      </ul>
+    </div>
+    <div class="leistung-card reveal">
+      <div class="leistung-icon">🔧</div>
+      <h3>Reparatur & Wartung</h3>
+      <p>Schnelle Hilfe bei defekten Fenstern, klemmenden Türen oder ausgefallenen Rollläden – auch kurzfristig.</p>
+      <ul class="leistung-features">
+        <li>Beschlagreparatur</li>
+        <li>Dichtungswechsel</li>
+        <li>Rollladenmotor-Tausch</li>
+        <li>Jahreswartung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<div style="padding: 6rem 5%; background: white;">
+  <div id="ueber-uns" style="padding:0;">
+    <div class="ueber-visual reveal">
+      <div class="ueber-img-frame">
+        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0f1f38"/>
+              <stop offset="100%" style="stop-color:#2d5a8e"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.3"/>
+              <stop offset="100%" style="stop-color:#4a9eca;stop-opacity:0.1"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#g1)"/>
+          <!-- House outline -->
+          <g transform="translate(80,80)" opacity="0.9">
+            <!-- Roof -->
+            <polygon points="120,0 240,80 0,80" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+            <!-- House body -->
+            <rect x="20" y="80" width="200" height="180" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            <!-- Big window left -->
+            <rect x="35" y="100" width="70" height="75" rx="4" fill="rgba(74,158,202,0.25)" stroke="#4a9eca" stroke-width="1.5"/>
+            <line x1="70" y1="100" x2="70" y2="175" stroke="#4a9eca" stroke-width="1" opacity="0.6"/>
+            <line x1="35" y1="137" x2="105" y2="137" stroke="#4a9eca" stroke-width="1" opacity="0.6"/>
+            <!-- Big window right -->
+            <rect x="135" y="100" width="70" height="75" rx="4" fill="rgba(74,158,202,0.25)" stroke="#4a9eca" stroke-width="1.5"/>
+            <line x1="170" y1="100" x2="170" y2="175" stroke="#4a9eca" stroke-width="1" opacity="0.6"/>
+            <line x1="135" y1="137" x2="205" y2="137" stroke="#4a9eca" stroke-width="1" opacity="0.6"/>
+            <!-- Door -->
+            <rect x="80" y="185" width="60" height="75" rx="4" fill="rgba(201,168,76,0.2)" stroke="#c9a84c" stroke-width="1.5"/>
+            <circle cx="132" cy="222" r="4" fill="#c9a84c"/>
+            <!-- Roller shutter on left window -->
+            <rect x="35" y="88" width="70" height="18" rx="2" fill="rgba(201,168,76,0.6)" stroke="#c9a84c" stroke-width="1"/>
+            <line x1="38" y1="93" x2="102" y2="93" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+            <line x1="38" y1="98" x2="102" y2="98" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+            <line x1="38" y1="103" x2="102" y2="103" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+          </g>
+          <!-- Stars/quality marks -->
+          <circle cx="50" cy="50" r="3" fill="#c9a84c" opacity="0.6"/>
+          <circle cx="350" cy="450" r="3" fill="#c9a84c" opacity="0.6"/>
+          <circle cx="360" cy="80" r="2" fill="#4a9eca" opacity="0.5"/>
+          <circle cx="40" cy="420" r="2" fill="#4a9eca" opacity="0.5"/>
+          <!-- Text overlay -->
+          <text x="200" y="430" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="11" font-family="DM Sans, sans-serif" letter-spacing="3">FENSTER · TÜREN · ROLLLÄDEN</text>
+        </svg>
+      </div>
+      <div class="ueber-badge-float">
+        <div>
+          <div class="badge-num">20+</div>
+          <div class="badge-txt">Jahre<br/>Erfahrung</div>
+        </div>
+        <div style="width:1px;height:40px;background:#e8edf4;"></div>
+        <div>
+          <div class="badge-num" style="color:var(--gold);">★★★★★</div>
+          <div class="badge-txt">Kundenbewertung</div>
+        </div>
+      </div>
+    </div>
+    <div class="ueber-text reveal">
+      <div class="section-label">Über uns</div>
+      <h2 class="section-title">Qualität & Vertrauen<br />seit über 20 Jahren</h2>
+      <p class="section-sub">Fenster Service Illingen steht für handwerkliche Präzision, termingerechte Ausführung und ehrliche Beratung – ohne Verkaufsdruck, ohne versteckte Kosten.</p>
+      <ul class="vorteile-list">
+        <li class="vorteil-item">
+          <div class="vorteil-icon">🛡️</div>
+          <div>
+            <div class="vorteil-title">Geprüfte Qualität</div>
+            <div class="vorteil-desc">Wir arbeiten nur mit namhaften Herstellern und zertifizierten Produkten.</div>
+          </div>
+        </li>
+        <li class="vorteil-item">
+          <div class="vorteil-icon">⏱️</div>
+          <div>
+            <div class="vorteil-title">Pünktlich & zuverlässig</div>
+            <div class="vorteil-desc">Terminzusagen halten wir ein – Ihre Zeit ist uns wichtig.</div>
+          </div>
+        </li>
+        <li class="vorteil-item">
+          <div class="vorteil-icon">💬</div>
+          <div>
+            <div class="vorteil-title">Persönliche Beratung</div>
+            <div class="vorteil-desc">Wir nehmen uns Zeit für Ihre Wünsche und finden die passende Lösung.</div>
+          </div>
+        </li>
+        <li class="vorteil-item">
+          <div class="vorteil-icon">💰</div>
+          <div>
+            <div class="vorteil-title">Faire Preise</div>
+            <div class="vorteil-desc">Transparente Kostenvoranschläge – keine bösen Überraschungen.</div>
+          </div>
+        </li>
+      </ul>
+      <a href="#kontakt" class="btn-primary">Jetzt kostenloses Angebot</a>
+    </div>
+  </div>
+</div>
+
+<!-- WARUM WIR -->
+<section id="warum">
+  <div class="reveal" style="max-width:640px;margin:0 auto 4rem;">
+    <div class="section-label">Zahlen & Fakten</div>
+    <h2 class="section-title" style="color:white;">In Zahlen überzeugen</h2>
+    <p class="section-sub" style="margin:0 auto;">Was uns ausmacht – auf einen Blick.</p>
+  </div>
+  <div class="warum-grid">
+    <div class="warum-item reveal">
+      <div class="warum-num">20+</div>
+      <div class="warum-label">Jahre Erfahrung in der Branche</div>
+    </div>
+    <div class="warum-item reveal">
+      <div class="warum-num">2.000+</div>
+      <div class="warum-label">Zufriedene Kunden in der Region</div>
+    </div>
+    <div class="warum-item reveal">
+      <div class="warum-num">1.500+</div>
+      <div class="warum-label">Installierte Fenster & Türen</div>
+    </div>
+    <div class="warum-item reveal">
+      <div class="warum-num">100%</div>
+      <div class="warum-label">Qualitätsgarantie auf alle Leistungen</div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="kontakt-wrap">
+    <div class="kontakt-info reveal">
+      <div class="section-label">Kontakt</div>
+      <h2>Wir freuen uns<br/>auf Ihre Anfrage.</h2>
+      <p>Ob Neubau, Sanierung oder Reparatur – schreiben Sie uns, rufen Sie an oder schicken Sie uns einfach eine WhatsApp-Nachricht.</p>
+      <div class="kontakt-cards">
+        <a href="tel:+491703553077" class="kontakt-card">
+          <div class="kontakt-card-icon icon-tel">📞</div>
+          <div class="kontakt-card-text">
+            <strong>Telefon</strong>
+            <span>+49 170 3553077</span>
+          </div>
+        </a>
+        <a href="https://wa.me/491703553077" target="_blank" rel="noopener" class="kontakt-card">
+          <div class="kontakt-card-icon icon-wa">💬</div>
+          <div class="kontakt-card-text">
+            <strong>WhatsApp</strong>
+            <span>Jetzt Nachricht schreiben</span>
+          </div>
+        </a>
+        <a href="mailto:info@fensterserviceillingen.de" class="kontakt-card">
+          <div class="kontakt-card-icon icon-mail">✉️</div>
+          <div class="kontakt-card-text">
+            <strong>E-Mail</strong>
+            <span>info@fensterserviceillingen.de</span>
+          </div>
+        </a>
+        <div class="kontakt-card" style="cursor:default;">
+          <div class="kontakt-card-icon icon-addr">📍</div>
+          <div class="kontakt-card-text">
+            <strong>Adresse</strong>
+            <span>Luigstr. 26, 75428 Illingen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM via Formspree -->
+    <div class="contact-form reveal">
+      <h3>📩 Nachricht senden</h3>
+      <form id="contactForm" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Max Mustermann" required />
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+49 ..." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail *</label>
+          <input type="email" id="email" name="email" placeholder="ihre@email.de" required />
+        </div>
+        <div class="form-group">
+          <label for="leistung">Gewünschte Leistung</label>
+          <select id="leistung" name="leistung">
+            <option value="">Bitte wählen…</option>
+            <option>Fensterinstallation</option>
+            <option>Türen / Haustüren</option>
+            <option>Rollläden / Sonnenschutz</option>
+            <option>Reparatur / Wartung</option>
+            <option>Kostenloser Beratungstermin</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Ihre Nachricht *</label>
+          <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie Ihr Anliegen kurz…" required></textarea>
+        </div>
+        <div class="form-dsgvo">
+          <input type="checkbox" id="dsgvo" name="dsgvo" required />
+          <label for="dsgvo">Ich stimme zu, dass meine Daten zur Bearbeitung dieser Anfrage gespeichert werden. Mehr Infos in der <a href="#impressum" style="color:var(--steel);">Datenschutzerklärung</a>.</label>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">✉ Nachricht absenden</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- IMPRESSUM PLACEHOLDER -->
+<div id="impressum" style="background:var(--navy);color:rgba(255,255,255,0.5);padding:3rem 5%;font-size:0.85rem;line-height:1.8;">
+  <div style="max-width:800px;margin:0 auto;">
+    <h4 style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:1rem;">Impressum</h4>
+    <p><strong style="color:white;">Fenster Service Illingen</strong><br/>
+    Luigstr. 26 · 75428 Illingen<br/>
+    Tel: +49 170 3553077<br/>
+    E-Mail: info@fensterserviceillingen.de</p>
+    <p style="margin-top:1rem;font-size:0.8rem;opacity:0.6;">
+      Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV: Inhaber Fenster Service Illingen.<br/>
+      [Vollständiges Impressum & Datenschutzerklärung bitte ergänzen]
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2025 Fenster Service Illingen · Alle Rechte vorbehalten</div>
+  <div class="footer-links">
+    <a href="#impressum">Impressum</a>
+    <a href="#impressum">Datenschutz</a>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/491703553077" target="_blank" rel="noopener" class="wa-fab" title="WhatsApp schreiben">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Mobile nav
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Smooth scroll for nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('navLinks').classList.remove('open');
+      }
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(el => {
+      if (el.isIntersecting) { el.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Contact form (Formspree)
+  const form = document.getElementById('contactForm');
+  const msg  = document.getElementById('formMsg');
+  const btn  = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = '⏳ Wird gesendet…';
+    msg.className = 'form-msg';
+    msg.style.display = 'none';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        msg.textContent = '✅ Nachricht erfolgreich gesendet! Wir melden uns bald.';
+        msg.className = 'form-msg success';
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      msg.textContent = '⚠️ Senden fehlgeschlagen. Bitte rufen Sie uns direkt an.';
+      msg.className = 'form-msg error';
+    }
+    btn.disabled = false;
+    btn.textContent = '✉ Nachricht absenden';
+  });
+</script>
+</body>
+</html>
