@@ -378,7 +378,12 @@
     </div>
     <div class="contact-form reveal">
       <h3>📩 Nachricht senden</h3>
-      <form id="contactForm" action="https://formspree.io/f/xgopyvln" method="POST">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="6ad11651-712c-402b-ae53-bbc4dfafe66d"/>
+        <input type="hidden" name="subject" value="Neue Anfrage – Fensterservice Illingen"/>
+        <input type="hidden" name="from_name" value="Fensterservice Illingen Website"/>
+        <input type="hidden" name="redirect" value="false"/>
+        <input type="hidden" name="botcheck" value=""/>
         <div class="form-row">
           <div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" placeholder="Max Mustermann" required/></div>
           <div class="form-group"><label for="telefon">Telefon</label><input type="tel" id="telefon" name="telefon" placeholder="+49 ..."/></div>
@@ -424,8 +429,15 @@
   const form=document.getElementById('contactForm'),msg=document.getElementById('formMsg'),btn=document.getElementById('submitBtn');
   form.addEventListener('submit',async e=>{
     e.preventDefault();btn.disabled=true;btn.textContent='⏳ Wird gesendet…';msg.className='form-msg';msg.style.display='none';
-    try{const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(res.ok){msg.textContent='✅ Nachricht erfolgreich gesendet! Wir melden uns bald.';msg.className='form-msg success';form.reset()}else throw new Error()}
-    catch{msg.textContent='⚠️ Senden fehlgeschlagen. Bitte rufen Sie uns direkt an.';msg.className='form-msg error'}
+    try{
+      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      const data=await res.json();
+      if(data.success){
+        msg.textContent='✅ Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald.';
+        msg.className='form-msg success';
+        form.reset();
+      } else throw new Error(data.message||'Fehler');
+    }catch(e){msg.textContent='⚠️ Senden fehlgeschlagen. Bitte rufen Sie uns direkt an: +49 170 3553077';msg.className='form-msg error'}
     btn.disabled=false;btn.textContent='✉ Nachricht absenden'
   });
 </script>
