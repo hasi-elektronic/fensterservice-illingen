@@ -78,6 +78,7 @@
     .galerie-item.tall{grid-row:span 2;grid-column:3}
 
     /* GOOGLE BEWERTUNGEN */
+    .elfsight-app-f69fc15c-d989-4f65-913b-55bb653d328d { --eapps-google-reviews-items-item-background-color: rgba(255,255,255,0.07) !important; }
     #bewertungen{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%)}
     .bew-header{text-align:center;max-width:560px;margin:0 auto 1.5rem}
     .bew-header .section-label{color:var(--gold)}
@@ -171,6 +172,8 @@
     @media(max-width:900px){.ueber-grid{grid-template-columns:1fr;gap:3rem}.galerie-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.galerie-item.big{grid-column:span 2}.galerie-item.tall{grid-row:auto;grid-column:auto}}
     @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--navy);padding:1.5rem 5%;gap:1.2rem}.nav-links.open{display:flex}.burger{display:flex}section{padding:4rem 5%}.kontakt-wrap{grid-template-columns:1fr;gap:3rem}.form-row{grid-template-columns:1fr}.wa-fab{bottom:1.2rem;right:1.2rem;width:52px;height:52px}.reviews-grid{grid-template-columns:1fr}.ueber-badge-float{right:0;bottom:-1rem}}
   </style>
+  <!-- Elfsight Google Reviews -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 <body>
 
@@ -293,56 +296,14 @@
     <div class="google-summary">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
       <div class="g-stars">★★★★★</div>
-      <div class="g-txt">4,9 · 57 Rezensionen auf Google</div>
+      <div class="g-txt">4,9 · 57 Rezensionen · Automatisch aktualisiert</div>
     </div>
   </div>
-  <div class="reviews-grid">
-    <div class="review-card reveal">
-      <div class="g-icon-corner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      <div class="review-top">
-        <div class="review-avatar" style="background:linear-gradient(135deg,#d44,#e77)">J</div>
-        <div><div class="review-name">Joerg Siegmann</div><div class="review-date">vor 3 Monaten</div></div>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Ich habe mir einige Fenster, Scheiben, Rollläden (zum Teil elektrisch mit Funk) und Fliegengitter einbauen lassen. Alles einwandfrei – sehr zu empfehlen!</div>
-    </div>
-    <div class="review-card reveal">
-      <div class="g-icon-corner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      <div class="review-top">
-        <div class="review-avatar" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">E</div>
-        <div><div class="review-name">Erbil Erdogan</div><div class="review-date">vor 3 Monaten</div></div>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Wir haben für unseren Neubau den Fensterservice Illingen und Herrn Öztürk beauftragt und könnten nicht zufriedener sein. Von der ersten Beratung bis zur finalen Montage – alles top!</div>
-    </div>
-    <div class="review-card reveal">
-      <div class="g-icon-corner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      <div class="review-top">
-        <div class="review-avatar" style="background:linear-gradient(135deg,#0f1f38,#2d5a8e)">D</div>
-        <div><div class="review-name">Dario Baglio</div><div class="review-date">vor 5 Monaten</div></div>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Ich habe mir von Fensterservice Illingen neue Fenster und eine Haustüre einbauen lassen und bin absolut begeistert! Vom ersten Kontakt bis zur Fertigstellung – erstklassig!</div>
-    </div>
-    <div class="review-card reveal">
-      <div class="g-icon-corner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      <div class="review-top">
-        <div class="review-avatar" style="background:linear-gradient(135deg,#c9a84c,#e8c96d)">M</div>
-        <div><div class="review-name">Marco Ehrler</div><div class="review-date">vor 4 Monaten</div></div>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Alles prima, Preis-Leistung super. Sehr gute Arbeit!</div>
-    </div>
-    <div class="review-card reveal">
-      <div class="g-icon-corner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      <div class="review-top">
-        <div class="review-avatar" style="background:linear-gradient(135deg,#1a7a3a,#34A853)">M</div>
-        <div><div class="review-name">Mesut Gürbüz</div><div class="review-date">vor 5 Monaten</div></div>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Top Arbeit! Sowohl die neuen Fenster als auch die Türen wurden sauber und präzise eingebaut. Sehr gute Qualität, zuverlässiger Service – absolut empfehlenswert!</div>
-    </div>
+  <!-- Elfsight Canlı Google Bewertungen -->
+  <div style="max-width:1100px;margin:0 auto 3rem;">
+    <div class="elfsight-app-f69fc15c-d989-4f65-913b-55bb653d328d" data-elfsight-app-lazy></div>
   </div>
+
   <div class="google-cta-wrap reveal">
     <a href="https://share.google/JMR4b5v5b8NMTFp52" target="_blank" rel="noopener" class="btn-google">
       <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
