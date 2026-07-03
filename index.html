@@ -43,8 +43,11 @@
     .btn-wa-hero{background:#25d366;color:#fff;border:none;padding:.85rem 1.6rem;border-radius:5px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .25s;display:inline-flex;align-items:center;gap:.6rem}
     .btn-wa-hero:hover{background:#1fb855;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.4)}
     .hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.12)}
-    .stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
-    .stat-label{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:.25rem;font-weight:300}
+    .hero-feat{display:flex;align-items:flex-start;gap:.7rem;max-width:230px}
+    .hero-feat-ic{width:26px;height:26px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+    .hero-feat-ic svg{width:15px;height:15px;color:var(--gold)}
+    .hero-feat-txt{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.4;font-weight:300}
+    .hero-feat-txt strong{display:block;color:#fff;font-weight:600;font-size:.92rem;margin-bottom:.1rem}
 
     .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
     section{padding:6rem 5%}
@@ -90,6 +93,16 @@
     .rp-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.3)}
     .rp-note{margin-top:1rem;font-size:.8rem;color:rgba(255,255,255,.4)}
     .rp-note a{color:rgba(201,168,76,.7);text-decoration:underline}
+    /* ── Custom SVG Icons ── */
+    .leistung-icon-badge{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--steel));display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;box-shadow:0 6px 18px rgba(15,31,56,.18)}
+    .leistung-icon-badge svg{width:26px;height:26px;color:#fff}
+    .vorteil-icon{width:38px;height:38px;border-radius:10px;background:rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .vorteil-icon svg{width:20px;height:20px;color:var(--gold)}
+    .kontakt-card-icon svg{width:20px;height:20px;color:#fff}
+    .h3-icon{display:inline-flex;vertical-align:-3px;margin-right:.5rem}
+    .h3-icon svg{width:20px;height:20px;color:var(--steel)}
+    .btn-ic{display:inline-flex;align-items:center}
+    .btn-ic svg{width:18px;height:18px}
     /* Cookie Consent Banner */
     .cookie-consent{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--navy);color:#fff;padding:1.2rem 5%;box-shadow:0 -4px 24px rgba(0,0,0,.25);border-top:2px solid var(--gold);animation:cookieUp .4s ease both}
     @keyframes cookieUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
@@ -153,8 +166,10 @@
     .warum-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;max-width:900px;margin:0 auto}
     .warum-item{background:#fff;border:1px solid var(--gray-light);border-radius:12px;padding:2rem 1.5rem;transition:all .3s;box-shadow:0 2px 12px rgba(15,31,56,.04)}
     .warum-item:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,31,56,.08)}
-    .warum-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1;margin-bottom:.5rem}
-    .warum-label{font-size:.88rem;color:var(--gray)}
+    .warum-ic{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--steel));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+    .warum-ic svg{width:24px;height:24px;color:#fff}
+    .warum-h{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+    .warum-label{font-size:.86rem;color:var(--gray);line-height:1.5}
 
     /* KONTAKT */
     #kontakt{background:var(--navy)}
@@ -219,17 +234,17 @@
     <h1 class="hero-title">Fenster &amp;<br/><em>Türen</em><br/>vom Profi.</h1>
     <p class="hero-sub">Professionelle Montage, faire Preise und höchste Qualität – für Privatkunden und Gewerbetreibende in Illingen und der gesamten Region.</p>
     <div class="hero-actions">
-      <a href="#kontakt" class="btn-primary">✉ Angebot anfragen</a>
-      <a href="tel:+491703553077" class="btn-ghost">📞 +49 170 3553077</a>
+      <a href="#kontakt" class="btn-primary"><span class="btn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Angebot anfragen</a>
+      <a href="tel:+491703553077" class="btn-ghost"><span class="btn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>+49 170 3553077</a>
       <a href="https://wa.me/491703553077" target="_blank" rel="noopener" class="btn-wa-hero">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">20+</div><div class="stat-label">Jahre Erfahrung</div></div>
-      <div><div class="stat-num">2.000+</div><div class="stat-label">Zufriedene Kunden</div></div>
-      <div><div class="stat-num">1.500+</div><div class="stat-label">Installierte Fenster</div></div>
+      <div class="hero-feat"><span class="hero-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div class="hero-feat-txt"><strong>Kostenlose Beratung</strong>inkl. Aufmaß vor Ort</div></div>
+      <div class="hero-feat"><span class="hero-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div class="hero-feat-txt"><strong>Festpreisgarantie</strong>keine versteckten Kosten</div></div>
+      <div class="hero-feat"><span class="hero-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div class="hero-feat-txt"><strong>Termingerechte Montage</strong>sauber &amp; zuverlässig</div></div>
     </div>
   </div>
 </section>
@@ -246,7 +261,7 @@
         <img class="leistung-photo" src="https://keby-api.hguencavdi.workers.dev/img/fenster/photo-alufenster.jpg" alt="Aluminiumfenster" loading="lazy"/>
       </div>
       <div class="leistung-body">
-        <div class="leistung-icon-sm">🪟</div>
+        <div class="leistung-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
         <h3>Fensterinstallation</h3>
         <p>Professionelle Montage für optimale Wärmedämmung, Schallschutz und langlebige Funktion.</p>
         <ul class="leistung-features">
@@ -262,7 +277,7 @@
         <img class="leistung-photo" src="https://keby-api.hguencavdi.workers.dev/img/fenster/photo-tuer.jpg" alt="Türmontage" loading="lazy"/>
       </div>
       <div class="leistung-body">
-        <div class="leistung-icon-sm">🚪</div>
+        <div class="leistung-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><circle cx="14.5" cy="12" r=".6" fill="currentColor"/></svg></div>
         <h3>Türen &amp; Haustüren</h3>
         <p>Sicherheit trifft Design – moderne Türen für Wohnhäuser, Gewerbe und Mehrfamilienhäuser.</p>
         <ul class="leistung-features">
@@ -278,7 +293,7 @@
         <img class="leistung-photo" src="https://keby-api.hguencavdi.workers.dev/img/fenster/photo-fenster-green.jpg" alt="Fenster Reparatur" loading="lazy"/>
       </div>
       <div class="leistung-body">
-        <div class="leistung-icon-sm">🔧</div>
+        <div class="leistung-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg></div>
         <h3>Reparatur &amp; Wartung</h3>
         <p>Schnelle Hilfe bei defekten Fenstern oder klemmenden Türen – auch kurzfristig und vor Ort.</p>
         <ul class="leistung-features">
@@ -361,9 +376,9 @@
       <div class="ueber-photo-sm"><img src="https://keby-api.hguencavdi.workers.dev/img/fenster/photo-fenster-sunset.jpg" alt="Fenster Qualität" loading="lazy"/></div>
       <div class="ueber-photo-sm"><img src="https://keby-api.hguencavdi.workers.dev/img/fenster/photo-tuer.jpg" alt="Türmontage" loading="lazy"/></div>
       <div class="ueber-badge-float">
-        <div><div class="badge-num">20+</div><div class="badge-txt">Jahre<br/>Erfahrung</div></div>
+        <div><div class="badge-num" style="color:var(--gold)">4,9</div><div class="badge-txt">Google<br/>Bewertung</div></div>
         <div style="width:1px;height:36px;background:#e8edf4"></div>
-        <div><div class="badge-num" style="color:var(--gold);font-size:1.3rem">★★★★★</div><div class="badge-txt">Google<br/>Bewertung</div></div>
+        <div><div class="badge-num" style="font-size:1.3rem">★★★★★</div><div class="badge-txt">57<br/>Rezensionen</div></div>
       </div>
     </div>
     <div class="reveal" style="padding-bottom:2rem">
@@ -371,10 +386,10 @@
       <h2 class="section-title">Qualität &amp; Vertrauen<br/>seit über 20 Jahren</h2>
       <p class="section-sub">Fenster Service Illingen – Ihr zuverlässiger Partner für professionelle Fenster- und Türmontage. Keine Verkaufsversprechen, nur handwerkliche Qualität.</p>
       <ul class="vorteile-list">
-        <li class="vorteil-item"><div class="vorteil-icon">🛡️</div><div><div class="vorteil-title">Geprüfte Qualität</div><div class="vorteil-desc">Nur zertifizierte Produkte namhafter Hersteller.</div></div></li>
-        <li class="vorteil-item"><div class="vorteil-icon">⏱️</div><div><div class="vorteil-title">Pünktlich &amp; zuverlässig</div><div class="vorteil-desc">Terminzusagen halten wir ein – Ihre Zeit ist kostbar.</div></div></li>
-        <li class="vorteil-item"><div class="vorteil-icon">💬</div><div><div class="vorteil-title">Persönliche Beratung</div><div class="vorteil-desc">Individuelle Lösungen, kein Druck, ehrliche Empfehlungen.</div></div></li>
-        <li class="vorteil-item"><div class="vorteil-icon">💰</div><div><div class="vorteil-title">Faire Preise</div><div class="vorteil-desc">Klare Kostenvoranschläge ohne versteckte Posten.</div></div></li>
+        <li class="vorteil-item"><div class="vorteil-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><div><div class="vorteil-title">Geprüfte Qualität</div><div class="vorteil-desc">Nur zertifizierte Produkte namhafter Hersteller.</div></div></li>
+        <li class="vorteil-item"><div class="vorteil-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 3h6"/></svg></div><div><div class="vorteil-title">Pünktlich &amp; zuverlässig</div><div class="vorteil-desc">Terminzusagen halten wir ein – Ihre Zeit ist kostbar.</div></div></li>
+        <li class="vorteil-item"><div class="vorteil-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg></div><div><div class="vorteil-title">Persönliche Beratung</div><div class="vorteil-desc">Individuelle Lösungen, kein Druck, ehrliche Empfehlungen.</div></div></li>
+        <li class="vorteil-item"><div class="vorteil-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 1 0 0 10"/><line x1="4" y1="10.5" x2="12" y2="10.5"/><line x1="4" y1="14" x2="11" y2="14"/></svg></div><div><div class="vorteil-title">Faire Preise</div><div class="vorteil-desc">Klare Kostenvoranschläge ohne versteckte Posten.</div></div></li>
       </ul>
       <a href="#kontakt" class="btn-primary">Jetzt kostenloses Angebot</a>
     </div>
@@ -383,15 +398,15 @@
 
 <section id="warum">
   <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 4rem">
-    <div class="section-label">Zahlen &amp; Fakten</div>
-    <h2 class="section-title">Zahlen die überzeugen</h2>
+    <div class="section-label">Ihre Vorteile</div>
+    <h2 class="section-title">Warum Fenster Service Illingen</h2>
     <p class="section-sub" style="margin:0 auto">Was uns auszeichnet – auf einen Blick.</p>
   </div>
   <div class="warum-grid">
-    <div class="warum-item reveal"><div class="warum-num">20+</div><div class="warum-label">Jahre Erfahrung</div></div>
-    <div class="warum-item reveal"><div class="warum-num">2.000+</div><div class="warum-label">Zufriedene Kunden</div></div>
-    <div class="warum-item reveal"><div class="warum-num">1.500+</div><div class="warum-label">Montierte Fenster</div></div>
-    <div class="warum-item reveal"><div class="warum-num">100%</div><div class="warum-label">Qualitätsgarantie</div></div>
+    <div class="warum-item reveal"><div class="warum-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="warum-h">Fachgerechte Montage</div><div class="warum-label">Sauberer Einbau nach Norm – vom Fachmann.</div></div>
+    <div class="warum-item reveal"><div class="warum-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 1 0 0 10"/><line x1="4" y1="10.5" x2="12" y2="10.5"/><line x1="4" y1="14" x2="11" y2="14"/></svg></div><div class="warum-h">Faire Festpreise</div><div class="warum-label">Transparent kalkuliert, ohne versteckte Kosten.</div></div>
+    <div class="warum-item reveal"><div class="warum-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg></div><div class="warum-h">Persönliche Beratung</div><div class="warum-label">Individuelle Lösungen, ehrlich &amp; ohne Druck.</div></div>
+    <div class="warum-item reveal"><div class="warum-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 3h6"/></svg></div><div class="warum-h">Schnelle Termine</div><div class="warum-label">Pünktlich, zuverlässig und termingerecht.</div></div>
   </div>
 </section>
 
@@ -402,14 +417,14 @@
       <h2>Wir freuen uns<br/>auf Ihre Anfrage.</h2>
       <p>Rufen Sie an, schreiben Sie per WhatsApp oder nutzen Sie das Kontaktformular – wir antworten schnell.</p>
       <div class="kontakt-cards">
-        <a href="tel:+491703553077" class="kontakt-card"><div class="kontakt-card-icon">📞</div><div class="kontakt-card-text"><strong>Telefon</strong><span>+49 170 3553077</span></div></a>
-        <a href="https://wa.me/491703553077" target="_blank" rel="noopener" class="kontakt-card"><div class="kontakt-card-icon">💬</div><div class="kontakt-card-text"><strong>WhatsApp</strong><span>Jetzt schreiben</span></div></a>
-        <a href="mailto:info@fensterserviceillingen.de" class="kontakt-card"><div class="kontakt-card-icon">✉️</div><div class="kontakt-card-text"><strong>E-Mail</strong><span>info@fensterserviceillingen.de</span></div></a>
-        <div class="kontakt-card" style="cursor:default"><div class="kontakt-card-icon">📍</div><div class="kontakt-card-text"><strong>Adresse</strong><span>Luigstr. 26, 75428 Illingen</span></div></div>
+        <a href="tel:+491703553077" class="kontakt-card"><div class="kontakt-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><div class="kontakt-card-text"><strong>Telefon</strong><span>+49 170 3553077</span></div></a>
+        <a href="https://wa.me/491703553077" target="_blank" rel="noopener" class="kontakt-card"><div class="kontakt-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg></div><div class="kontakt-card-text"><strong>WhatsApp</strong><span>Jetzt schreiben</span></div></a>
+        <a href="mailto:info@fensterserviceillingen.de" class="kontakt-card"><div class="kontakt-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div class="kontakt-card-text"><strong>E-Mail</strong><span>info@fensterserviceillingen.de</span></div></a>
+        <div class="kontakt-card" style="cursor:default"><div class="kontakt-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="kontakt-card-text"><strong>Adresse</strong><span>Luigstr. 26, 75428 Illingen</span></div></div>
       </div>
     </div>
     <div class="contact-form reveal">
-      <h3>📩 Nachricht senden</h3>
+      <h3><span class="h3-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Nachricht senden</h3>
       <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="6ad11651-712c-402b-ae53-bbc4dfafe66d"/>
         <input type="hidden" name="subject" value="Neue Kundenanfrage – Fensterservice Illingen"/>
@@ -427,7 +442,7 @@
         </div>
         <div class="form-group"><label for="nachricht">Ihre Nachricht *</label><textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie Ihr Anliegen kurz…" required></textarea></div>
         <div class="form-dsgvo"><input type="checkbox" id="dsgvo" name="dsgvo" required/><label for="dsgvo">Ich stimme zu, dass meine Daten zur Bearbeitung dieser Anfrage gespeichert werden. Mehr Infos in der <a href="/datenschutz.html" style="color:var(--steel)">Datenschutzerklärung</a>.</label></div>
-        <button type="submit" class="btn-submit" id="submitBtn">✉ Nachricht absenden</button>
+        <button type="submit" class="btn-submit" id="submitBtn"><span class="btn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Nachricht absenden</button>
         <div class="form-msg" id="formMsg"></div>
       </form>
     </div>
@@ -494,7 +509,7 @@
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
   const form=document.getElementById('contactForm'),msg=document.getElementById('formMsg'),btn=document.getElementById('submitBtn');
   form.addEventListener('submit',async e=>{
-    e.preventDefault();btn.disabled=true;btn.textContent='⏳ Wird gesendet…';msg.className='form-msg';msg.style.display='none';
+    e.preventDefault();btn.disabled=true;btn.textContent='Wird gesendet…';msg.className='form-msg';msg.style.display='none';
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       const data=await res.json();
@@ -504,7 +519,7 @@
         form.reset();
       } else throw new Error(data.message||'Fehler');
     }catch(e){msg.textContent='⚠️ Senden fehlgeschlagen. Bitte rufen Sie uns direkt an: +49 170 3553077';msg.className='form-msg error'}
-    btn.disabled=false;btn.textContent='✉ Nachricht absenden'
+    btn.disabled=false;btn.textContent='Nachricht absenden'
   });
 </script>
 </body>
